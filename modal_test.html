@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Modal Test</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+  <meta name="format-detection" content="telephone=no">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+  <style>
+    body{
+      font-family: "Noto Sans JP",-apple-system,BlinkMacSystemFont,"Segoe UI","Hiragino Sans","Hiragino Kaku Gthic ProN",Meiryo,sans-serif;
+    }
+    h1{
+      font-size: 24px;
+      font-weight: 500;
+      margin: 30px 0;
+      padding-left: 10px;
+      border-left: 4px solid rgb(14,13,106);
+    }
+    h2{
+      font-size: 20px;
+      font-weight: 500;
+      text-align: left;
+      padding-left: 10px;
+      border-left: 4px solid rgb(14,13,106);
+    }
+    .p-modal{
+      width:100%;
+      margin:0 auto;
+      max-width:700px;
+    }
+    .p-modal__button__wrapper {
+      width: 100%;
+      text-align: center;
+      position: relative;
+      z-index: 1;
+    }
+    .p-modal__button {
+      display: inline-block;
+      padding-top: 10px;
+      padding-bottom: 10px;
+      padding-right: 40px;
+      padding-left: 40px;
+      font-size: 18px;
+      letter-spacing: 0.7px;
+      background: #0e0d6a;
+      color: #fff;
+      text-decoration: none;
+    }
+    .p-modal__content__warpper {
+      display: none;
+      width: 100vw;
+      height: 100vh;
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 5;
+    }
+    .p-modal__content__background {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 2;
+      background: #000;
+      opacity: 0.7;
+    }
+    .p-modal__content {
+      display: none;
+      max-width: 500px;
+      max-height: calc(100vh - 130px);
+      margin-bottom: 0;
+      margin-top: 50px;
+      margin-left: auto;
+      margin-right: auto;
+      padding: 20px;
+      background: #fff;
+      position: relative;
+      z-index: 5;
+      text-align: center;
+      overflow-x: auto;
+    }
+    @media (max-width: 700px) {
+      .p-modal__content {
+        margin-bottom: 0;
+        margin-top: 50px;
+        margin-right: 3%;
+        margin-left: 3%;
+      }
+    }
+    .p-modal__content__close {
+      position: absolute;
+      right: 10px;
+      top: 10px;
+      width: 30px;
+      height: 30px;
+      opacity: 0.5;
+      cursor:pointer;
+    }
+    .p-modal__content__close:hover {
+      opacity: 0.8;
+    }
+    .p-modal__content__close:before,
+    .p-modal__content__close:after {
+      position: absolute;
+      left: 15px;
+      content: ' ';
+      height: 30px;
+      width: 2px;
+      background-color: #333;
+    }
+    .p-modal__content__close:before {
+      transform: rotate(45deg);
+    }
+
+    .p-modal__content__close:after {
+      transform: rotate(-45deg);
+    }
+    body.is-scrolloff {
+      overflow: hidden;
+      height: 100%;
+    }
+  </style>
+</head>
+<body>
+  <section>
+    <div class="p-modal">
+      <h1>モーダルテスト用ページ</h1>
+      <div class="p-modal__button__wrapper">
+        <a class="p-modal__button" href="javascript:void(0);">Modal Test</a>
+      </div>
+      <div class="p-modal__content__warpper">
+        <div class="p-modal__content__background"></div>
+        <div class="p-modal__content">
+          <div class="p-modal__content__close"></div>
+          <h2>モーダルテスト</h2>
+          MODAL TEST<br>
+          MODAL TEST<br>
+          MODAL TEST<br>
+          MODAL TEST<br>
+          MODAL TEST<br>
+          MODAL TEST<br>
+          MODAL TEST<br>
+          MODAL TEST<br>
+          MODAL TEST<br>
+          MODAL TEST<br>
+          MODAL TEST<br>
+          MODAL TEST<br>
+          MODAL TEST<br>
+          MODAL TEST<br>
+          MODAL TEST<br>
+          MODAL TEST<br>
+          MODAL TEST<br>
+          MODAL TEST<br>
+          MODAL TEST<br>
+          MODAL TEST<br>
+          MODAL TEST<br>
+          MODAL TEST<br>
+          MODAL TEST<br>
+          MODAL TEST<br>
+          MODAL TEST<br>
+          MODAL TEST<br>
+          MODAL TEST<br>
+          MODAL TEST<br>
+          MODAL TEST<br>
+          MODAL TEST<br>
+          MODAL TEST<br>
+          MODAL TEST<br>
+          MODAL TEST<br>
+          MODAL TEST<br>
+          MODAL TEST<br>
+          MODAL TEST<br>
+          MODAL TEST<br>
+          MODAL TEST<br>
+          MODAL TEST<br>
+          MODAL TEST<br>
+          MODAL TEST<br>
+          MODAL TEST<br>
+          MODAL TEST<br>
+          MODAL TEST<br>
+          MODAL TEST<br>
+          MODAL TEST<br>
+          MODAL TEST<br>
+          MODAL TEST<br>
+        </div>
+      </div>
+    </div>
+  </section>
+  <script type="text/javascript">
+    (function($) {
+      $('.p-modal__button').click(function() {
+        $('.p-modal__content__warpper').show();
+        $('.p-modal__content').fadeIn();
+        $('body').addClass('is-scrolloff');
+      });
+      $('.p-modal__content__close').click(function() {
+        $('.p-modal__content__warpper').hide();
+        $('.p-modal__content').fadeOut();
+        $('body').removeClass('is-scrolloff');
+      });
+      $('.p-modal__content__background').click(function() {
+        $('.p-modal__content__close').click();
+      });
+    })(jQuery);
+  </script>
+</body>
+</html>

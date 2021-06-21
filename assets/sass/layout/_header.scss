@@ -1,0 +1,30 @@
+.l-header {
+  width: 100%;
+  max-width: 498px;
+  height: 66px;
+  margin: 0 auto;
+  display: flex;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+  align-items: center;
+  padding-right: 12px;
+  padding-left: 12px;
+  background: linear-gradient(270deg, #69549f 0%, #2e479e 100%);
+  figure {
+    width: 104px;
+    height: 36px;
+    img {
+      width: 100%;
+    }
+  }
+  .l-header__btn {
+    display: flex;
+    .l-header__btn__box {
+      width: 45px;
+      height: 45px;
+      background: linear-gradient(180deg, #f0eaff 57.29%, #cabaf2 100%);
+      border-radius: 4px;
+      margin-left: 10px;
+    }
+  }
+}

@@ -1,0 +1,13 @@
+.l-main {
+  width: 100%;
+  max-width: 498px;
+  height: 200px;
+  background: #fff;
+  box-shadow: 0px 0px 20px #000;
+  margin: 0 auto;
+  .l-main__content {
+    max-width: 980px;
+    width: 100%;
+    margin: 0 auto;
+  }
+}

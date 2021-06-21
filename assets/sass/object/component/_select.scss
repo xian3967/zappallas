@@ -1,0 +1,27 @@
+.c-select {
+  max-width: 425px;
+  width: 100%;
+  position: relative;
+  display: inline-block;
+  &::after {
+    content: '';
+    width: 8px;
+    height: 8px;
+    border: 0;
+    border-bottom: solid 2px rgba(0, 0, 0, 0.54);
+    border-right: solid 2px rgba(0, 0, 0, 0.54);
+    -ms-transform: rotate(45deg) translateY(-50%);
+    -webkit-transform: rotate(45deg) translateY(-50%);
+    transform: rotate(45deg) translateY(-50%);
+    position: absolute;
+    top: 50%;
+    right: 14px;
+  }
+  div {
+    max-width: 425px;
+    width: 100%;
+    height: 40px;
+    padding: 10px;
+    background: #f0f0f0;
+  }
+}

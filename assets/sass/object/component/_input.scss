@@ -1,0 +1,37 @@
+.c-input {
+  margin-bottom: 24px;
+  .c-input__title {
+    @include fzb(18);
+
+    margin-bottom: 4px;
+  }
+  .c-input__desc {
+    margin-top: 10px;
+    @media (max-width: 767px) {
+      @include fz(10);
+    }
+  }
+  .c-input__tel {
+    max-width: 425px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    input {
+      max-width: 126px;
+      width: 100%;
+      &::before {
+        content: "-";
+        margin-right: 100px;
+        display: inline-block;
+      }
+      @media (max-width: 767px) {
+        max-width: 103px;
+      }
+    }
+    span {
+      width: 8px;
+      height: 1px;
+      background: #333;
+    }
+  }
+}

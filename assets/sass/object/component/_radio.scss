@@ -1,0 +1,42 @@
+.c-radio {
+  margin-bottom: 10px;
+  position: relative;
+  label {
+    position: relative;
+    padding-left: 32px;
+    cursor: pointer;
+    span {
+      @include fz(14);
+    }
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      transition: all 0.2s;
+      -webkit-transition: all 0.2s;
+      border-radius: 50%;
+    }
+    &::before {
+      left: 0;
+      width: 20px;
+      height: 20px;
+      border: 2px solid $black;
+    }
+    &::after {
+      top: 0;
+      left: 5px;
+      width: 10px;
+      height: 10px;
+      background: $green;
+      opacity: 0;
+    }
+  }
+  input[type="radio"]:checked + label {
+    &::before {
+      border: 2px solid $green;
+    }
+    &::after {
+      opacity: 1;
+    }
+  }
+}

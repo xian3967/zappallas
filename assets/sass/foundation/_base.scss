@@ -1,0 +1,86 @@
+html {
+  color: #333;
+  font-size: 62.5%;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  *,
+  *::before,
+  *::after {
+    -webkit-box-sizing: inherit;
+    box-sizing: inherit;
+  }
+}
+
+body {
+  font-family: "Hiragino Kaku Gothic ProN", "ヒラギノ角ゴ ProN W3", Meiryo,
+    メイリオ, Osaka, "MS PGothic", arial, helvetica, sans-serif;
+  line-height: 1.6;
+  @include fz(12);
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+}
+
+.isFixed {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+}
+
+.isHidden {
+  display: none !important;
+}
+
+.isShow {
+  display: block !important;
+}
+
+input[type="submit"] {
+  -webkit-appearance: none;
+}
+
+.errorColor {
+  color: $red;
+  margin-top: 4px;
+}
+
+.errorInput {
+  border: 1px solid $red;
+  background: #ffeded !important;
+}
+
+.errorButton {
+  border: 1px solid $red !important;
+  background: #ffeded !important;
+  color: $red !important;
+}
+
+@media all and (max-width: 767px) {
+  .m-sp {
+    display: block;
+  }
+  .m-pc {
+    display: none;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 992px) {
+  .m-tb {
+    display: block;
+  }
+  .m-pc {
+    display: none;
+  }
+}
+
+@media (min-width: 993px) {
+  .m-sp {
+    display: none;
+  }
+  .m-tb {
+    display: none;
+  }
+  .m-pc {
+    display: block;
+  }
+}

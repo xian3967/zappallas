@@ -27,13 +27,13 @@
       left: 5px;
       width: 10px;
       height: 10px;
-      background: $green;
+      background: $purple;
       opacity: 0;
     }
   }
   input[type="radio"]:checked + label {
     &::before {
-      border: 2px solid $green;
+      border: 2px solid $purple;
     }
     &::after {
       opacity: 1;

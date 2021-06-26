@@ -10,9 +10,20 @@
   padding-right: 12px;
   padding-left: 12px;
   background: linear-gradient(270deg, #69549f 0%, #2e479e 100%);
-  figure {
+  @media (max-width: 480px) {
+    height: 50px;
+  }
+  .l-header__logo {
     width: 104px;
     height: 36px;
+    @media (max-width: 480px) {
+      width: 78px;
+      height: 28px;
+      svg {
+        width: 78px;
+        height: 28px;
+      }
+    }
     img {
       width: 100%;
     }
@@ -25,6 +36,19 @@
       background: linear-gradient(180deg, #f0eaff 57.29%, #cabaf2 100%);
       border-radius: 4px;
       margin-left: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      .l-header__btn__box__login {
+      }
+      .l-header__btn__box__menu {
+        width: 100%;
+      }
+      @media (max-width: 480px) {
+        width: 34px;
+        height: 34px;
+      }
     }
   }
 }

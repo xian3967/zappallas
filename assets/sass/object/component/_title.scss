@@ -1,0 +1,13 @@
+.c-title {
+  width: 100%;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  .c-title__text {
+    position: absolute;
+    @include fz(19);
+    font-family: "source-han-serif-japanese", serif;
+  }
+}

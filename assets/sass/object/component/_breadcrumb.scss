@@ -1,0 +1,27 @@
+.c-breadcrumb {
+  height: 32px;
+  display: flex;
+  align-items: center;
+  padding-left: 8px;
+  ul {
+    display: flex;
+    list-style-type: none;
+    font-size: 12px;
+    li {
+      color: #000;
+      display: flex;
+      align-items: center;
+      &:last-child {
+        &::after {
+          display: none;
+        }
+      }
+      &::after {
+        content: ">";
+        margin-left: 6px;
+        margin-right: 6px;
+        color: $black;
+      }
+    }
+  }
+}

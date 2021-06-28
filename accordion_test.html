@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Accordion Test</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+  <meta name="format-detection" content="telephone=no">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+  <style>
+    body {
+      background: #f7f7f7;
+      font-family: "Noto Sans JP", -apple-system, BlinkMacSystemFont, "Segoe UI", "Hiragino Sans", "Hiragino Kaku Gthic ProN", Meiryo, sans-serif;
+    }
+    h1 {
+      font-size: 24px;
+      font-weight: 500;
+      margin: 30px 0;
+      padding-left: 10px;
+      border-left: 4px solid rgb(14, 13, 106);
+    }
+    h2 {
+      font-size: 20px;
+      font-weight: 500;
+      text-align: left;
+      padding-left: 10px;
+      border-left: 4px solid rgb(14, 13, 106);
+    }
+    .p-accordion {
+      width: 100%;
+      margin: 0 auto;
+      max-width: 498px;
+    }
+    .p-accordion__wrapper{
+      width:100%;
+
+    }
+    .p-accordion__item {
+      border-top: solid 1px #c9c9c9;
+      border-bottom: solid 1px #c9c9c9;
+      background-color: #fff;
+    }
+    .p-accordion__title {
+      position: relative;
+      padding: 15px 30px 15px 15px;
+      text-decoration: none;
+      cursor: pointer;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
+    }
+    .p-accordion__title.accordion-active {
+      box-shadow: 0px 3px 2px 0.5px rgb(0 0 0 / 10%);
+    }
+
+    .p-accordion__title:after {
+      content: '';
+      width: 2px;
+      height: 20px;
+      position: absolute;
+      top: 50%;
+      right: 20px;
+      transform: translateY(-50%);
+      background: #333;
+      transition: 100ms all ease-out;
+    }
+
+    .p-accordion__title:before {
+      content: '';
+      height: 2px;
+      width: 20px;
+      position: absolute;
+      right: 11.5px;
+      top: 50%;
+      transform: translateY(-50%);
+      background: #333;
+      transition: 150ms all ease-out;
+    }
+
+    .p-accordion__title.accordion-active:before {
+      display: none;
+    }
+
+    .p-accordion__title.accordion-active:after {
+      transform: translateY(-50%) rotate(90deg);
+    }
+
+    .p-accordion__title--text {
+      width: 100%;
+      font-size: 18px;
+      font-weight: 500;
+      text-align: left;
+      color: #333;
+    }
+
+    .p-accordion__title--icon {
+      display: none;
+    }
+
+    .p-accordion__content {
+      display: none;
+      padding: 20px;
+      font-size: 14px;
+      background: #f5f4fc;
+    }
+
+    .p-accordion__content p{
+      padding: 0;
+      margin: 0;
+    }
+
+    .p-accordion__content-img {
+      width: 100%;
+    }
+  </style>
+</head>
+
+<body>
+  <section>
+    <div class="p-accordion">
+      <h1>アコーディオンテスト用ページ</h1>
+        <div class="p-accordion__wrapper">
+          <div class="p-accordion__item">
+            <div class="p-accordion__title">
+              <img class="p-accordion__title--icon" src="" alt=""><span
+                class="p-accordion__title--text">オペレーション</span>
+            </div>
+            <div class="p-accordion__content">
+              <p>
+                アコーディオンテースト<br />
+                アコーディオンテースト<br />
+                アコーディオンテースト<br />
+              </p>
+            </div>
+          </div>
+          <div class="p-accordion__item">
+            <div class="p-accordion__title">
+              <img class="p-accordion__title--icon" src="" alt=""><span
+                class="p-accordion__title--text">オペレーション</span>
+            </div>
+            <div class="p-accordion__content">
+              <p>
+                アコーディオンテースト<br />
+                アコーディオンテースト<br />
+                アコーディオンテースト<br />
+              </p>
+            </div>
+          </div>
+          <div class="p-accordion__item">
+            <div class="p-accordion__title">
+              <img class="p-accordion__title--icon" src="" alt=""><span
+                class="p-accordion__title--text">オペレーション</span>
+            </div>
+            <div class="p-accordion__content">
+              <p>
+                アコーディオンテースト<br />
+                アコーディオンテースト<br />
+                アコーディオンテースト<br />
+              </p>
+            </div>
+          </div>
+          <div class="p-accordion__item">
+            <div class="p-accordion__title">
+              <img class="p-accordion__title--icon" src="" alt=""><span
+                class="p-accordion__title--text">オペレーション</span>
+            </div>
+            <div class="p-accordion__content">
+              <p>
+                アコーディオンテースト<br />
+                アコーディオンテースト<br />
+                アコーディオンテースト<br />
+              </p>
+            </div>
+          </div>
+          <div class="p-accordion__item">
+            <div class="p-accordion__title">
+              <img class="p-accordion__title--icon" src="" alt=""><span
+                class="p-accordion__title--text">オペレーション</span>
+            </div>
+            <div class="p-accordion__content">
+              <p>
+                アコーディオンテースト<br />
+                アコーディオンテースト<br />
+                アコーディオンテースト<br />
+              </p>
+            </div>
+          </div>
+        </div>
+    </div>
+  </section>
+  <script type="text/javascript">
+    (function($) {
+      $('.p-accordion__title').on('click', function(e) {
+        e.preventDefault();
+        if (!$(this).hasClass('accordion-active')) {
+          $('.p-accordion__content').slideUp(150);
+          $('.p-accordion__title').removeClass('accordion-active');
+        }
+        $(this).toggleClass('accordion-active');
+        $(this).next().slideToggle(150);
+      });
+    })(jQuery);
+  </script>
+</body>
+
+</html>

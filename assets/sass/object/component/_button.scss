@@ -1,49 +1,66 @@
 .c-button {
-  // width: 100%;
-  // height: 50px;
-  // border-radius: 15px;
-  // display: flex;
-  // align-items: center;
-  // justify-content: center;
-  // position: relative;
-  // // background: linear-gradient(180deg, #7155bc 0%, #2e479e 100%);
-  // background: #fff;
-  width: 150px;
-  height: 150px;
-  background-color: #fff;
-  border-radius: 20px;
-  position: relative;
-  &:after {
-    content: "";
-    position: absolute;
-    top: -10px;
-    right: -10px;
-    bottom: -10px;
-    left: -10px;
-    background: linear-gradient(135deg, tomato, blue);
-    border-radius: 20px;
-    z-index: -1;
+  width: 100%;
+  border: double 3px transparent;
+  border-radius: 15px;
+  background-origin: border-box;
+  background-clip: content-box, border-box;
+  text-align: center;
+  a{
+    display: block;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    position: relative;
   }
-  // &.purple {
-  //   background-image: url(../images/btn_purple.png);
-  //   background-repeat: no-repeat;
-  // }
-  // &.gold {
-  //   background-image: url(../images/btn_gold.png);
-  //   background-repeat: no-repeat;
-  // }
-  // &.gray {
-  //   background-image: url(../images/btn_gray.png);
-  //   background-repeat: no-repeat;
-  // }
-  // &.red {
-  //   background-image: url(../images/btn_red.png);
-  //   background-repeat: no-repeat;
-  // }
+  &:hover{
+    opacity: 0.8;
+  }
+  &:hover{
+    opacity: 0.7;
+  }
+  &.purple {
+    background-image: linear-gradient(to bottom, #6e54ba, #30479f), linear-gradient(to bottom, #c4b9e3, #30479f);
+   }
+  &.gold {
+   background-image: linear-gradient(to bottom, #cbae57, #806a21), linear-gradient(to bottom, #eadeb9, #806a21);
+  }
+  &.gray {
+   background-image: linear-gradient(to bottom, #d9d9d9, #d9d9d9), linear-gradient(to bottom, #f0f0f0, #d9d9d9);
+  }
+  &.red {
+    background-image: linear-gradient(to bottom, #f24242, #8c0f0f), linear-gradient(to bottom, #fbb2b2, #8c0f0f);
+  }
   .c-button__text {
     @include fzb(22);
+    line-height: 22px;
     letter-spacing: 0.1em;
     color: $white;
     font-family: "Noto Sans", sans-serif;
+  }
+}
+.c-button__tel{
+  svg{
+    position: absolute;
+    left: 30px;
+    top: 14px;
+  }
+}
+.c-logoutButton{
+  width: 100%;
+  text-align: center;
+  margin-top: 30px;
+  a{
+    @include fzb(18);
+    position: relative;
+    @media (hover: hover) {
+      &:hover{
+        opacity: 0.7;
+     }
+    }
+    svg{
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      right: -15px;
+    }
   }
 }

@@ -171,58 +171,80 @@
       <nav class="c-breadcrumb">
         <ul>
           <li><a href="/">TOP</a></li>
-          <li>今すぐ鑑定</li>
+          <li>お申し込み完了</li>
         </ul>
       </nav>
       <!--END パンクズ-->
 
       <!--title-->
       <div class="c-title__large">
-        <span class="c-title__large__text">今すぐ鑑定開始</span>
+        <span class="c-title__large__text">お申し込み完了</span>
         <div class="c-title__large__bg">
           <img src="assets/images/title_bg.png" alt="今すぐ鑑定開始">
         </div>
       </div>
       <!--END title-->
       <div class="l-section">
-        <div class="l-section__silde__wrapper">
-          <div class="l-section__silde">
-            <div class="l-section__silde__content">
-              <img src="assets/images/top_slide_img_01.png" alt="">
-            </div>
-            <div class="l-section__silde__content">
-              <img src="assets/images/top_slide_img_02.png" alt="">
-            </div>
-            <div class="l-section__silde__content">
-              <img src="assets/images/top_slide_img_03.png" alt="">
-            </div>
+        <div class="textAlign-center mt-20">
+          <svg width="72" height="72" viewBox="0 0 72 72" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect width="72" height="72" rx="36" fill="url(#paint0_linear)"/>
+          <path d="M19 38.8L29.2 50L53 22" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+          <defs>
+          <linearGradient id="paint0_linear" x1="36" y1="0" x2="36" y2="72" gradientUnits="userSpaceOnUse">
+          <stop stop-color="#7155BC"/>
+          <stop offset="1" stop-color="#2E479E"/>
+          </linearGradient>
+          </defs>
+          </svg>
+        </div>
+        <p class="textAlign-center fontSize-12 mt-20 fontColor-red">※先にお申し込みをされたお客さんがいらっしゃったため、<br />
+　         ご予約（順番待ち）に変更させて頂きました。</p>
+        <div class="c-title__background mt-30">
+          <p class="fontWeight-500 fontSize-12 mb-20">【予約内容】</p>
+          <p><span class="c-title__background__text">2番目にお申し込み済み</span></p>
+          <p class="fontSize-14 mt-10">2021/05/18　10:00～14:30<br />予想待ち時間 20-60分</p>
+          <div class="mt-10 textAlign-center">
+            <a href="#" class="c-textLink fontSize-14 fontWeight-bold">電話番号をコピーする</a>
           </div>
+        </div>
+        <p class="textAlign-center fontSize-15 mt-30 fontColor-black">川崎 夏毬（カワサキ  ナツマリ）先生のご予約ありがとうございます。順番にご案内を差し上げますので、しばらくお待ちくださいませ。<br />
+        <div class="backgroundColor-red mt-30">
+          <h3 class="fontSize-16 fontWeight-bold textAlign-center mb-10">予約後の流れと注意事項</h3>
+          <ul class="c-list__text-indent">
+            <li>・先生が待機開始後、順番が回り次第、メールとお電話にて通知されますので、4分以内に着信履歴から折り返すか、メールに記載の番号から電話を掛けて鑑定を初めてください。</li>
+            <li class="mt-15">・順番待ちの混雑状況によっては、鑑定に入れないまま鑑定士の待機時間が終了する場合がございます。予めご了承ください。</li>
+            <li class="mt-15">・必ずしもご希望の時間通りに鑑定できるものではございません。予めご了承ください。</li>
+            <li class="mt-15">・ご案内中の４分以内に鑑定に入られない場合、ご予約は自動的にキャンセルとなり、次のお客様へ順番が移ります。</li>
+            <li class="mt-15">・一度順番待ちを行いますと、キャンセル又は鑑定を終えるまで同一の鑑定士への鑑定申し込み全般は出来ません。</li>
+          </ul>
         </div>
       </div>
 
     </div>
-    <div id="footer"></div>
+    <footer>
+      <div class="l-footer">
+        <div class="l-footer__link__wrapper">
+          <ul class="l-footer__link">
+            <li><a href="#">よくある質問</a></li>
+            <li><a href="#">運営会社</a></li>
+            <li><a href="#">お問い合わせ</a></li>
+            <li><a href="#">料金案内</a></li>
+            <li><a href="#">特定商取引</a></li>
+            <li><a href="#">利用規約</a></li>
+            <li><a href="#">サイトマップ</a></li>
+            <li><a href="#">プライバシーポリシー</a></li>
+            <li><a href="#">占い師募集</a></li>
+          </ul>
+        </div>
+        <p class="l-footer__content">copyright 2021 株式会社コンコース</p>
+      </div>
+    </footer>
   </div>
   <script>
     $(function() {
       $('#header').load('header.html');
       $('#footer').load('footer.html');
     });
-    (function($) {
-      $(document).ready(function() {
-        $('.l-section__silde').slick({
-          slidesToShow: 1,
-          slidesToScroll: 1,
-          fade: true,
-          dots: true,
-          loop: true,
-          swipe: false,
-          touchMove: false,
-          autoplay: true
-        });
-      });
-
-    })(jQuery);
   </script>
 </body>
 </html>

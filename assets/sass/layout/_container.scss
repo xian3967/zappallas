@@ -3,4 +3,8 @@
   max-width: 498px;
   box-shadow: 0px 0px 20px #333;
   margin: 0 auto;
+  overflow: hidden;
+}
+body.is-scrolloff{
+  overflow: hidden !important;
 }

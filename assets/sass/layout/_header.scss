@@ -1,7 +1,12 @@
 .l-header {
-  width: 100%;
+  width: calc(100% - 40px);
   max-width: 498px;
   height: 66px;
+  position: fixed;
+  top: 20px;
+  left: 0;
+  right: 0;
+  z-index: 100;
   margin: 0 auto;
   display: flex;
   -webkit-justify-content: space-between;
@@ -11,6 +16,8 @@
   padding-left: 12px;
   background: linear-gradient(270deg, #69549f 0%, #2e479e 100%);
   @media (max-width: 480px) {
+    top: 0!important;
+    width: 100%;
     height: 50px;
   }
   .l-header__logo {
@@ -50,5 +57,111 @@
         height: 34px;
       }
     }
+  }
+  .l-header__menu__background{
+    display: none;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    background: #000;
+    opacity: 0.5;
+  }
+  .l-header__menu__background.is-grayscale{
+    display: block;
+  }
+  .l-header__menu{
+    width: 100%;
+    max-width: 350px;
+    height: 100vh;
+    position: fixed;
+    z-index: 1000;
+    top: 0;
+    right: -350px;
+    transition: 0.5s;
+    background: $white;
+    overflow-y: auto;
+    padding-bottom: 30px;
+    .l-header__menu__close{
+      position: absolute;
+      right: 10px;
+      top: 10px;
+      width: 30px;
+      height: 30px;
+      z-index: 100;
+      opacity: 0.5;
+      cursor:pointer;
+      @media (hover: hover) {
+        &:hover{
+          opacity: 0.7;
+       }
+      }
+      &:after{
+        position: absolute;
+        left: 15px;
+        content: ' ';
+        height: 30px;
+        width: 2px;
+        background-color: #333;
+        transform: rotate(-45deg);
+      }
+      &:before{
+        position: absolute;
+        left: 15px;
+        content: ' ';
+        height: 30px;
+        width: 2px;
+        background-color: #333;
+        transform: rotate(45deg);
+      }
+    }
+    .l-header__menu__wrapper{
+      width: 100%;
+      margin-top: 30px;
+      position: relative;
+      .l-header__menu__list__wrapper{
+        .l-header__menu__list{
+          .l-header__menu__list__title{
+            @include fzb(16);
+            color: $black;
+            margin-top: 20px;
+            padding-top: 15px;
+            padding-bottom: 3px;
+            padding-left: 15px;
+            padding-left: 15px;
+            border-bottom: 2px solid #d4c59d;
+          }
+          .l-header__menu__sublist{
+            li{
+              @include fzb(16);
+              a{
+                position: relative;
+                padding: 15px;
+                border-bottom: 1px solid #c9c9c9;
+                display: block;
+                color: $black;
+                @media (hover: hover) {
+                  &:hover{
+                    opacity: 0.7;
+                 }
+                }
+                svg{
+                  position: absolute;
+                  right: 10px;
+                  top: 50%;
+                  transform: translateY(-50%);
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  .l-header__menu.is-manuopen{
+    right: 0;
+    transition: 0.5;
   }
 }

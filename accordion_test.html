@@ -198,12 +198,12 @@
     (function($) {
       $('.p-accordion__title').on('click', function(e) {
         e.preventDefault();
-        if (!$(this).hasClass('accordion-active')) {
-          $('.p-accordion__content').slideUp(150);
-          $('.p-accordion__title').removeClass('accordion-active');
-        }
+        //if(!$(this).hasClass('accordion-active')){
+        // $('.p-accordion__content').slideUp(250);
+        // $('.p-accordion__title').removeClass('accordion-active');
+        //}
         $(this).toggleClass('accordion-active');
-        $(this).next().slideToggle(150);
+        $(this).next().slideToggle(250);
       });
     })(jQuery);
   </script>

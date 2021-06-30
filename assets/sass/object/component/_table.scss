@@ -1,0 +1,19 @@
+.c-table{
+  width: 100%;
+  tr{
+    width: 100%;
+    border-collapse: collapse;
+    @include fz(15);
+    th{
+      width: 40%;
+      border: 1px solid #e8e8e8;
+      padding: 10px;
+      background: #f5f4fc;
+    }
+    td{
+      width: 60%;
+      border: 1px solid #e8e8e8;
+      padding: 10px;
+    }
+  }
+}

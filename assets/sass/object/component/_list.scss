@@ -5,3 +5,24 @@
     text-indent: -15px;
   }
 }
+
+.c-list__text-grayBackground{
+  padding-left: 15px;
+  li{
+    @include fz(15);
+    p{
+      @include fzb(16);
+      background: #f2f2f2;
+      padding-left: 10px;
+      padding-top: 2px;
+      padding-bottom: 2px;
+    }
+  }
+}
+.c-list__text-grayBackground.purple-background{
+  li{
+    p{
+      background: #f5f4fc;
+    }
+  }
+}

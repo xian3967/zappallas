@@ -7,4 +7,133 @@
       }
     }
   }
+  .l-section__profile__wrapper{
+    .l-section__profile{
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      justify-content: center;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      .l-section__profile__left{
+        width: 92px;
+        img{
+          width: 100%;
+        }
+        p{
+          font-size: 14px;
+          font-weight: 500;
+          line-height: 20.27px;
+          width: 92px;
+          height: 24px;
+          padding: 2.4px 8px;
+          text-align: center;
+          border-radius: 4px;
+          &.white{
+            background: #fff;
+          }
+          &.yellow{
+            background: #dabb1b;
+          }
+          &.purple{
+            background: #7255bc;
+          }
+          &.blue{
+            background: #2e479e;
+          }
+          &.gold{
+            background: #ab9763;
+          }
+          &.black{
+            background: #202020;
+          }
+        }
+      }
+      .l-section__profile__right{
+        margin-left: 12px;
+        .l-section__profile__name__hurigana{
+          font-size: 10px;
+          line-height: 15px;
+          font-weight: 500;
+        }
+        .l-section__profile__name{
+          font-size: 15px;
+          font-weight: 500;
+          line-height: 22.5px;
+          a{
+            color: #6040b1;
+            text-decoration-line: underline;
+            @media (hover: hover) {
+              &:hover{
+                opacity: 0.7;
+             }
+            }
+          }
+        }
+        .l-section__profile__box{
+          display: -webkit-box;
+          display: -ms-flexbox;
+          display: flex;
+          -webkit-flex-wrap: wrap;
+          -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+          margin-top: 16px;
+          .l-section__profile__tel{
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-flex-wrap: wrap;
+            -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            align-items: center;
+            font-size: 12px;
+            font-weight: 500;
+            line-height: 18px;
+            margin-right: 12px;
+            img{
+              width: 9px;
+              height: 12px;
+              margin-right: 4px;
+            }
+          }
+          .l-section__profile__career{
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-flex-wrap: wrap;
+            -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            align-items: center;
+            font-size: 12px;
+            line-height: 18px;
+            font-weight: 500;
+            img{
+              width: 13px;
+              height: 12px;
+              margin-right: 4px;
+            }
+          }
+        }
+        .l-section__profile__lebel__wrapper{
+          margin-top: 16px;
+          font-weight: 500;
+          .label{
+            width: 42px;
+            height: 14px;
+            display: inline-block;
+            text-align: center;
+            font-size: 10px;
+            font-weight: 500;
+            background: #dfdff1;
+            border-radius: 4px;
+            padding: 2px;
+          }
+        }
+      }
+    }
+  }
 }

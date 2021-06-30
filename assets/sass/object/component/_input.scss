@@ -1,10 +1,34 @@
 .c-input {
   margin-bottom: 24px;
   .c-input__title {
-    @include fzb(18);
-
-    margin-bottom: 4px;
+    @include fzb(16);
+    line-height: 14px;
+    border-left: 4px solid #bda055;
+    padding-left: 5px;
+    margin-bottom: 10px;
   }
+  .c-input__text__gray{
+    @include fz(12);
+    font-weight: 500;
+    line-height: 18px;
+    color: #808080;
+    margin-top: 10px;
+    padding-left: 10px;
+  }
+  input{
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    border: 1px solid #808080;
+    border-radius: 8px;
+    background: #fff;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 24px;
+    padding: 10px;
+    font-family: "Noto Sans", sans-serif;
+  }
+  /*
   .c-input__desc {
     margin-top: 10px;
     @media (max-width: 767px) {
@@ -34,4 +58,5 @@
       background: #333;
     }
   }
+  */
 }

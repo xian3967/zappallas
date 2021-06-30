@@ -20,20 +20,16 @@
   position: relative;
   .c-title__middle__text {
     position: absolute;
-    @include fzb(19);
+    @include fzb(16);
     font-family: "source-han-serif-japanese", serif;
   }
 }
 .c-title__small {
   width: 100%;
-  text-align: center;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: relative;
   .c-title__small__text {
-    position: absolute;
-    @include fzb(19);
+    @include fzb(16);
+    border-left: 4px solid #bda055;
+    padding-left: 5px;
     font-family: "source-han-serif-japanese", serif;
   }
 }

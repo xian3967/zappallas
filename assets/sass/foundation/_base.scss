@@ -88,6 +88,14 @@ input[type="submit"] {
     display: block;
   }
 }
+
+.date__label{
+  padding:2px 5px;
+  background: #dfdff1;
+  padding-right: 5px;
+  margin-right: 5px;
+  border-radius: 4px;
+}
 //背景色
 .backgroundColor-red{
   background-color: #FFEFEF;
@@ -116,7 +124,9 @@ input[type="submit"] {
 .fontSize-12{
   @include fz(12);
 }
-
+.fontSize-10{
+  @include fz(10);
+}
 //フォントウェイト
 .fontWeight-bold{
   font-weight: bold;
@@ -135,16 +145,19 @@ input[type="submit"] {
 .fontColor-white{
   color: #fff;
 }
+.fontColor-gray{
+  color: #808080;
+}
 
 //テキスト整列
 .textAlign-center{
-  text-align: center;
+  text-align: center !important;
 }
 .textAlign-left{
-  text-align: left;
+  text-align: left !important;
 }
 .textAlign-right{
-  text-align: right;
+  text-align: right !important;
 }
 //マージン
 .mt-5{
@@ -155,6 +168,9 @@ input[type="submit"] {
 }
 .mt-15{
   margin-top: 15px;
+}
+.mt-16{
+  margin-top: 16px;
 }
 .mt-20{
   margin-top: 20px;
@@ -175,6 +191,9 @@ input[type="submit"] {
 .mb-15{
   margin-bottom: 15px;
 }
+.mb-16{
+  margin-bottom: 16px;
+}
 .mb-20{
   margin-bottom: 20px;
 }
@@ -194,6 +213,9 @@ input[type="submit"] {
 .ml-15{
   margin-left: 15px;
 }
+.ml-16{
+  margin-left: 16px;
+}
 .ml-20{
   margin-left: 20px;
 }
@@ -212,6 +234,9 @@ input[type="submit"] {
 }
 .mr-15{
   margin-right: 15px;
+}
+.mr-16{
+  margin-right: 16px;
 }
 .mr-20{
   margin-right: 20px;

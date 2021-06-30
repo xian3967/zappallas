@@ -1,14 +1,12 @@
 .l-footer {
   width: 100%;
-  .l-footer__link__wrapper{
+  background: $white;
+  .l-footer__link__wrapper {
     width: 100%;
-    padding-top: 20px;
-    padding-bottom: 20px;
-    padding-left: 10px;
-    padding-right: 10px;
-    margin-top: 30px;
+    padding-top: 30px;
+    padding-bottom: 8px;
     border-top: 1px solid #c9c9c9;
-    .l-footer__link{
+    .l-footer__link {
       width: 100%;
       display: -webkit-box;
       display: -ms-flexbox;
@@ -16,30 +14,37 @@
       -webkit-flex-wrap: wrap;
       -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-      li{
+      li {
         width: 50%;
-        @include fz(16);
+        @include fz(14);
         color: #595959;
-        padding-bottom: 5px;
+        padding-bottom: 12px;
         padding-left: 60px;
-        &:nth-child(n-1){
+        font-family: "Noto Sans", sans-serif;
+        &:nth-child(n-1) {
           width: 50%;
-          padding-left: 60px;
+          padding-left: 68px;
+          @media (max-width: 480px) {
+            padding-left: 48px;
+          }
         }
-        &:nth-child(2n){
+        &:nth-child(2n) {
           width: 50%;
-          padding-left: 30px;
+          padding-left: 24px;
+          @media (max-width: 480px) {
+            padding-left: 14px;
+          }
         }
         @media (max-width: 480px) {
-          @include fz(14);
-          padding-left: 0 !important ;
+          @include fz(12);
         }
-        a{
-          color: $black;
+        a {
+          color: $gray;
+          opacity: 0.8;
           @media (hover: hover) {
-            &:hover{
+            &:hover {
               opacity: 0.7;
-           }
+            }
           }
         }
       }
@@ -47,8 +52,13 @@
   }
   .l-footer__content {
     width: 100%;
-    padding: 10px 0;
-    text-align: center;
+    height: 32px;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-align-items: center;
+    align-items: center;
     background: #2e479e;
     @include fz(14);
     color: $white;

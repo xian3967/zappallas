@@ -37,20 +37,22 @@
     font-family: "source-han-serif-japanese", serif;
   }
 }
-.c-title__background{
-    background: url('../images/title_background_icon_01.png')no-repeat ,url('../images/title_background_icon_02.png')no-repeat,url('../images/title_background_icon_04.png')no-repeat,url('../images/title_background_icon_03.png') no-repeat;
-    background-position: left top,right top,right bottom,left bottom;
-    background-color:#F5F4FC;
-    padding: 10px;
-    background-size: 18px 18px;
-    text-align: center;
-    border: 3px solid #F5F4FC;
-    .c-title__background__text{
-      @include fzb(18);
-    }
-    .c-title__background__tel{
-      @include fzb(18);
-      letter-spacing: 2px;
-    }
-
+.c-title__background {
+  background: url("../images/title_background_icon_01.png") no-repeat,
+    url("../images/title_background_icon_02.png") no-repeat,
+    url("../images/title_background_icon_04.png") no-repeat,
+    url("../images/title_background_icon_03.png") no-repeat;
+  background-position: left top, right top, right bottom, left bottom;
+  background-color: #f5f4fc;
+  padding: 10px;
+  background-size: 18px 18px;
+  text-align: center;
+  border: 3px solid #f5f4fc;
+  .c-title__background__text {
+    @include fzb(18);
+  }
+  .c-title__background__tel {
+    @include fz(18);
+    letter-spacing: 0.3em;
+  }
 }

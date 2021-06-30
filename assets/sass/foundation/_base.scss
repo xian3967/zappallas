@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
 html {
-  color: #333;
+  color: $black;
   font-size: 62.5%;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
@@ -17,9 +17,38 @@ body {
   font-family: "source-han-serif-japanese", serif, sans-serif;
   line-height: 1.6;
   @include fz(12);
-  display: flex;
-  flex-direction: column;
-  padding: 20px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  background-image: url(../images/bg_pc.jpg);
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: cover;
+  background-attachment: fixed;
+  &::before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    background: url("../images/top_01.png") no-repeat,
+      url("../images/top_02.png") no-repeat,
+      url("../images/top_03.png") no-repeat,
+      url("../images/top_04.png") no-repeat;
+    background-position: left 32px top 32px, right 32px top 32px,
+      right 32px bottom 32px, left 32px bottom 32px;
+    position: fixed;
+    top: 0;
+    z-index: -1;
+  }
+  &::after {
+    content: "";
+    width: 337px;
+    height: 120px;
+    background-image: url(../images/top_bg_logo.png);
+    background-size: 337px 120px;
+    z-index: -1;
+    position: fixed;
+    right: 160px;
+    bottom: 200px;
+  }
   @media (max-width: 480px) {
     padding: 0;
   }
@@ -89,214 +118,220 @@ input[type="submit"] {
   }
 }
 //背景色
-.backgroundColor-red{
-  background-color: #FFEFEF;
-  padding:15px;
+.backgroundColor-red {
+  background-color: #ffefef;
+  padding: 15px;
 }
-.backgroundColor-gray{
+.backgroundColor-gray {
+}
 
+//フォント指定
+.fontSans {
+  font-family: "Noto Sans", sans-serif;
+}
+.fontYuGothic {
+  font-family: "游ゴシック", "Yu Gothic", "游ゴシック体", YuGothic, sans-serif;
 }
 //フォントサイズ
-.fontSize-21{
+.fontSize-21 {
   @include fzb(21);
   line-height: 25px;
 }
-.fontSize-18{
+.fontSize-18 {
   @include fzb(18);
 }
-.fontSize-16{
+.fontSize-16 {
   @include fz(16);
 }
-.fontSize-15{
+.fontSize-15 {
   @include fz(15);
 }
-.fontSize-14{
+.fontSize-14 {
   @include fz(14);
 }
-.fontSize-12{
+.fontSize-12 {
   @include fz(12);
 }
 
 //フォントウェイト
-.fontWeight-bold{
+.fontWeight-bold {
   font-weight: bold;
 }
-.fontWeight-500{
+.fontWeight-500 {
   font-weight: 500;
 }
 
 //フォント色
-.fontColor-black{
+.fontColor-black {
   color: #000;
 }
-.fontColor-red{
+.fontColor-red {
   color: #ff0000;
 }
-.fontColor-white{
+.fontColor-white {
   color: #fff;
 }
 
 //テキスト整列
-.textAlign-center{
+.textAlign-center {
   text-align: center;
 }
-.textAlign-left{
+.textAlign-left {
   text-align: left;
 }
-.textAlign-right{
+.textAlign-right {
   text-align: right;
 }
 //マージン
-.mt-5{
+.mt-5 {
   margin-top: 5px;
 }
-.mt-10{
+.mt-10 {
   margin-top: 10px;
 }
-.mt-15{
+.mt-15 {
   margin-top: 15px;
 }
-.mt-20{
+.mt-20 {
   margin-top: 20px;
 }
-.mt-25{
+.mt-25 {
   margin-top: 25px;
 }
-.mt-30{
+.mt-30 {
   margin-top: 30px;
 }
 
-.mb-5{
+.mb-5 {
   margin-bottom: 5px;
 }
-.mb-10{
+.mb-10 {
   margin-bottom: 10px;
 }
-.mb-15{
+.mb-15 {
   margin-bottom: 15px;
 }
-.mb-20{
+.mb-20 {
   margin-bottom: 20px;
 }
-.mb-25{
+.mb-25 {
   margin-bottom: 25px;
 }
-.mb-30{
+.mb-30 {
   margin-bottom: 30px;
 }
 
-.ml-5{
+.ml-5 {
   margin-left: 5px;
 }
-.ml-10{
+.ml-10 {
   margin-left: 10px;
 }
-.ml-15{
+.ml-15 {
   margin-left: 15px;
 }
-.ml-20{
+.ml-20 {
   margin-left: 20px;
 }
-.ml-25{
+.ml-25 {
   margin-left: 25px;
 }
-.ml-30{
+.ml-30 {
   margin-left: 30px;
 }
 
-.mr-5{
+.mr-5 {
   margin-right: 5px;
 }
-.mr-10{
+.mr-10 {
   margin-right: 10px;
 }
-.mr-15{
+.mr-15 {
   margin-right: 15px;
 }
-.mr-20{
+.mr-20 {
   margin-right: 20px;
 }
-.mr-25{
+.mr-25 {
   margin-right: 25px;
 }
-.mr-30{
+.mr-30 {
   margin-right: 30px;
 }
 
-
 //パディング
-.pt-5{
+.pt-5 {
   padding-top: 5px;
 }
-.pt-10{
+.pt-10 {
   padding-top: 10px;
 }
-.pt-15{
+.pt-15 {
   padding-top: 15px;
 }
-.pt-20{
+.pt-20 {
   padding-top: 20px;
 }
-.pt-25{
+.pt-25 {
   padding-top: 25px;
 }
-.pt-30{
+.pt-30 {
   padding-top: 30px;
 }
 
-.pb-5{
+.pb-5 {
   padding-bottom: 5px;
 }
-.pb-10{
+.pb-10 {
   padding-bottom: 10px;
 }
-.pb-15{
+.pb-15 {
   padding-bottom: 15px;
 }
-.pb-20{
+.pb-20 {
   padding-bottom: 20px;
 }
-.pb-25{
+.pb-25 {
   padding-bottom: 25px;
 }
-.pb-30{
+.pb-30 {
   padding-bottom: 30px;
 }
 
-.pl-5{
+.pl-5 {
   padding-left: 5px;
 }
-.pl-10{
+.pl-10 {
   padding-left: 10px;
 }
-.pl-15{
+.pl-15 {
   padding-left: 15px;
 }
-.pl-20{
+.pl-20 {
   padding-left: 20px;
 }
-.pl-25{
+.pl-25 {
   padding-left: 25px;
 }
-.pl-30{
+.pl-30 {
   padding-left: 30px;
 }
 
-.pr-5{
+.pr-5 {
   padding-right: 5px;
 }
-.pr-10{
+.pr-10 {
   padding-right: 10px;
 }
-.pr-15{
+.pr-15 {
   padding-right: 15px;
 }
-.pr-20{
+.pr-20 {
   padding-right: 20px;
 }
-.pr-25{
+.pr-25 {
   padding-right: 25px;
 }
-.pr-30{
+.pr-30 {
   padding-right: 30px;
 }

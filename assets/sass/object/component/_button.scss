@@ -1,62 +1,73 @@
 .c-button {
   width: 100%;
-  border: double 3px transparent;
-  border-radius: 15px;
+  border: double 2px transparent;
+  border-radius: 10px;
   background-origin: border-box;
   background-clip: content-box, border-box;
   text-align: center;
-  a{
+  position: relative;
+  a {
     display: block;
-    padding-top: 15px;
-    padding-bottom: 15px;
     position: relative;
+    &.large {
+      height: 46px;
+    }
   }
-  &:hover{
+  &:hover {
     opacity: 0.8;
   }
-  &:hover{
+  &:hover {
     opacity: 0.7;
   }
   &.purple {
-    background-image: linear-gradient(to bottom, #6e54ba, #30479f), linear-gradient(to bottom, #c4b9e3, #30479f);
-   }
+    background-image: linear-gradient(to bottom, #6e54ba, #30479f),
+      linear-gradient(to bottom, #c4b9e3, #30479f);
+  }
   &.gold {
-   background-image: linear-gradient(to bottom, #cbae57, #806a21), linear-gradient(to bottom, #eadeb9, #806a21);
+    background-image: linear-gradient(to bottom, #cbae57, #806a21),
+      linear-gradient(to bottom, #eadeb9, #806a21);
   }
   &.gray {
-   background-image: linear-gradient(to bottom, #d9d9d9, #d9d9d9), linear-gradient(to bottom, #f0f0f0, #d9d9d9);
+    background-image: linear-gradient(to bottom, #d9d9d9, #d9d9d9),
+      linear-gradient(to bottom, #f0f0f0, #d9d9d9);
   }
   &.red {
-    background-image: linear-gradient(to bottom, #f24242, #8c0f0f), linear-gradient(to bottom, #fbb2b2, #8c0f0f);
+    background-image: linear-gradient(to bottom, #f24242, #8c0f0f),
+      linear-gradient(to bottom, #fbb2b2, #8c0f0f);
   }
   .c-button__text {
+    width: 100%;
     @include fzb(22);
-    line-height: 22px;
     letter-spacing: 0.1em;
     color: $white;
     font-family: "Noto Sans", sans-serif;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
   }
 }
-.c-button__tel{
-  svg{
+.c-button__tel {
+  .c-phone {
     position: absolute;
     left: 30px;
-    top: 14px;
+    top: 50%;
+    transform: translateY(-50%);
   }
 }
-.c-logoutButton{
+.c-logoutButton {
   width: 100%;
   text-align: center;
   margin-top: 30px;
-  a{
+  a {
     @include fzb(18);
     position: relative;
     @media (hover: hover) {
-      &:hover{
+      &:hover {
         opacity: 0.7;
-     }
+      }
     }
-    svg{
+    svg {
       position: absolute;
       top: 50%;
       transform: translateY(-50%);
